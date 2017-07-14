@@ -45,11 +45,12 @@
 * cloud-vue : vue（Vue2.x + Vue-router2.x + Vuex)的前端项目
 
 ## 部署说明
- * 导入cloud-simple-service的cloud-vue.sql到mysql数据库。
+ * 导入cloud-simple-service的cloud-vue.sql到mysql数据库  admin 账户密码为admin1234。
  * 修改cloud-config-repo与cloud-zipkin-ui中的数据库配置文件
  * 打包命令 mvn package -DskipDockerBuild
  * 依次启动cloud-eureka-server-1.0.0.jar、cloud-config-server-1.0.0.jar、cloud-zipkin-ui-1.0.0.jar、cloud-simple-service-1.0.0.jar。
  * 端口：配置中心端口(1111)、注册中心(8888)、rest服务(80)、zipkin服务(9012)、UI前端(8080),如果端口冲突请自行修改。
+ 
 
 ## 效果图
 ![登录](./pic/登录.png)
