@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -49,10 +50,10 @@ public class SysAdminUsersController extends CommonController{
 	/**
 	 * 读取
 	 */
-	@ApiOperation(value = "编辑", httpMethod="GET")
-	@GetMapping(value = "edit/{id}", produces = {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public String read(@PathVariable Integer id, HttpServletRequest request) {
+	@ApiOperation(value = "编辑", httpMethod="GET")
+	@RequestMapping(value = "edit/{id}")
+	public String read(@PathVariable("id") Integer id, HttpServletRequest request) {
 		SysAdminUser goup = sysAdminUserService.selectByPrimaryKey(id);
 		return FastJsonUtils.resultSuccess(200, "成功", goup);
 	}
@@ -75,10 +76,11 @@ public class SysAdminUsersController extends CommonController{
 	/**
 	 * 更新
 	 */
+	@ResponseBody
 	@ApiOperation(value = "更新")
 	@PostMapping(value = "update", produces = {"application/json;charset=UTF-8"})
-	@ResponseBody
-	public String update(@RequestBody(required=false) SysAdminUser record,HttpServletRequest request) {
+	public String update(@RequestBody SysAdminUser record,HttpServletRequest request) {
+		record.setPassword(DigestUtils.md5Hex(record.getPassword()));
 		int row = sysAdminUserService.save(record);
 		if(row == 0) {
 			return FastJsonUtils.resultError(-200, "更新失败", null);

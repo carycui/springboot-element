@@ -24,9 +24,7 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
   },
-  eslint: {
-    configFile: './.eslintrc.json'
-  },
+
   plugins: [
     new webpack.DefinePlugin({
       HOST: process.env.NODE_ENV === 'production' ? PUB_HOST : DEV_HOST
@@ -46,18 +44,6 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint'
-      },
-      {
-        test: /\.vue$/,
-        exclude: /node_modules/,
-        loader: 'eslint'
-      }
-    ],
     loaders: [
       {
         test: /\.vue$/,

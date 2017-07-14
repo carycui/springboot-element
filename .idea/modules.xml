@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-eureka-server/src/main/main.iml" filepath="$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-eureka-server/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-simple-service/src/main/main1.iml" filepath="$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-simple-service/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-config-server/src/main/main2.iml" filepath="$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-config-server/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-zipkin-ui/src/main/main3.iml" filepath="$PROJECT_DIR$/back-end/cloud-vue-parent/cloud-zipkin-ui/src/main/main3.iml" />
+    </modules>
+  </component>
+</project>

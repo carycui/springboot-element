@@ -13,14 +13,13 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<docker.plugin.version>0.3.258</docker.plugin.version>
-		<spring-boot-admin.version>1.4.5</spring-boot-admin.version>
         <druid.version>1.0.18</druid.version>
 	</properties>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.5.RELEASE</version>
+		<version>1.5.4.RELEASE</version>
 	</parent>
 	<dependencyManagement>
 		<dependencies>
@@ -39,41 +38,6 @@
 		<module>cloud-simple-service</module>
 		<module>cloud-zipkin-ui</module>
 	</modules>
-
-	<repositories>
-		<repository>
-			<id>aliyun-maven</id>
-	        <name>aliyun maven</name>
-	        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-	        <snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-            <id>spring-releases</id>
-            <name>Spring Releases</name>
-            <url>https://repo.spring.io/libs-release-local</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>http://repo.spring.io/libs-milestone-local</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>public</id>
-			<name>Public Repositories</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -81,6 +45,5 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<defaultGoal>compile</defaultGoal>
 	</build>
 </project>

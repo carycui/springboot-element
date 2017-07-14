@@ -21,9 +21,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 	
 	@Autowired
 	private SysAdminUserService sysAdminUserService;
-	
-	
-	
+
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
@@ -33,14 +31,14 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		String sessionId = request.getHeader(Constant.SESSION_ID);
 		HttpSession session = request.getSession();
 		// 校验sessionid和authKey
-		if(StringUtils.isEmpty(authKey) || StringUtils.isEmpty(sessionId)) {
+/*		if(StringUtils.isEmpty(authKey) || StringUtils.isEmpty(sessionId)) {
 			response.setContentType("application/json;charset=UTF-8");
 			PrintWriter writer = response.getWriter();
 			writer.write(FastJsonUtils.resultError(-100, "authKey或sessionId不能为空！", null));
 			writer.flush();
 			return false;
 		} 
-		
+
 		//检查账号有效性
 		SysAdminUser sessionAdminUser = (SysAdminUser)session.getAttribute(Constant.LOGIN_ADMIN_USER);
 		if(sessionAdminUser == null) {
@@ -62,7 +60,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 			writer.write(FastJsonUtils.resultError(-101, "账号已被删除或禁用", null));
 			writer.flush();
 			return false;
-		}
+		}*/
 		
 		return true;
 	}

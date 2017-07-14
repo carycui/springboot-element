@@ -169,7 +169,6 @@ public class LoginController extends CommonController{
 	 * 修改密码
 	 * @param old_pwd
 	 * @param new_pwd
-	 * @param session
 	 */
 	@PostMapping(value = "/setInfo", produces = "application/json;charset=UTF-8")
 	@ResponseBody
