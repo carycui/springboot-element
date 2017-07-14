@@ -267,7 +267,7 @@ CREATE TABLE `sys_admin_user` (
 -- ----------------------------
 -- Records of sys_admin_user
 -- ----------------------------
-INSERT INTO `sys_admin_user` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '', '1487217060', '超级管理员', '1', '5', '1');
+INSERT INTO `sys_admin_user` VALUES ('1', 'admin', 'c93ccd78b2076528346216b3b2f701e6', '', '1487217060', '超级管理员', '1', '5', '1');
 INSERT INTO `sys_admin_user` VALUES ('3', '用户AAAA', 'c78b6663d47cfbdb4d65ea51c104044e', '', '1487217060', '用户A', '5', '20', '1');
 
 -- ----------------------------
