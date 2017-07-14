@@ -74,9 +74,3 @@
 
 ## License
 cloud-vue 基于apache2.0 <http://www.apache.org/licenses/LICENSE-2.0>
-
-如果项目对您有用，请作者喝杯咖啡吧！
-
-![支付二维码](./pic/二维码.jpg)
-
-
